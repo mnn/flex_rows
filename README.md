@@ -8,7 +8,7 @@ Mainly to easily achieve equivalent heights of columns in one row.
 
 Examples
 --------
-[Showcase page](https://cdn.rawgit.com/mnn/flex_rows/blob/master/example/index.html)
+[Showcase page](https://cdn.rawgit.com/mnn/flex_rows/master/example/index.html)
 
 Download
 --------
