@@ -1,0 +1,64 @@
+row-flex-mixin()
+  display flex
+  flex-wrap wrap
+  &:before // fix for older chromes
+    display none
+
+row-flex-reversed-mixin()
+  flex-direction row-reverse
+
+
+flex-order-gen(part="")
+  for num in (-5..18)
+    .flex-order-{part}{num}
+      order num
+
+
+.row-xs-flex
+  row-flex-mixin()
+
+.row-xs-flex-reversed
+  row-flex-mixin()
+  row-flex-reversed-mixin()
+
+flex-order-gen("xs-")
+
+
+@media (min-width: 768px)
+  .row-sm-flex
+    row-flex-mixin()
+  .row-sm-flex-reversed
+    row-flex-mixin()
+    row-flex-reversed-mixin()
+  flex-order-gen("sm-")
+
+@media (min-width: 992px)
+  .row-md-flex
+    row-flex-mixin()
+  .row-md-flex-reversed
+    row-flex-mixin()
+    row-flex-reversed-mixin()
+  flex-order-gen("md-")
+
+@media (min-width: 1200px)
+  .row-lg-flex
+    row-flex-mixin()
+  .row-lg-flex-reversed
+    row-flex-mixin()
+    row-flex-reversed-mixin()
+  flex-order-gen("lg-")
+
+flex-order-gen()
+
+
+for resRow in "xs" "sm" "md" "lg"
+  for var in "" "-reversed"
+    .row-{resRow}-flex{var}
+      for res in "xs" "sm" "md" "lg"
+        for num in (1..12)
+          .col-{res}-{num}
+            display flex
+            flex-flow column
+            min-height 100%
+            & > *
+              flex-grow 1

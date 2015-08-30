@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script data-require="jquery@*" data-semver="2.1.4" src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" data-semver="3.3.5"
+          data-require="bootstrap@*"/>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" data-semver="3.3.5"
+            data-require="bootstrap@*"></script>
+    <link rel="stylesheet" href="../dist/flex_rows.css"/>
+    <link rel="stylesheet" href="styles.css"/>
+</head>
+
+<body>
+<div class="container">
+    <h1><strong>flex_rows</strong> example</h1>
+
+    <div class="row row-md-flex">
+        <div class="col-xs-12 col-md-6">
+            <div class="text-box">
+                div.row.row-md-flex div.col-xs-12.col-md-6<br>
+            </div>
+        </div>
+        <div class="col-xs-12 col-md-6 flex-order-lg--1">
+            a column without child element<br>
+            flex-order-lg--1
+        </div>
+    </div>
+    <div class="row row-sm-flex">
+        <div class="col-xs-12 col-sm-6">
+            <div class="text-box">
+                1
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-6">
+            <div class="text-box">
+                2<br>
+                x<br>
+                y<br>
+                x<br>
+                y<br>
+            </div>
+        </div>
+    </div>
+
+    <div class="row row-sm-flex-reversed">
+        <div class="col-xs-12 col-sm-6">
+            <div class="text-box">
+                3<br>
+
+                <div>row-sm-flex-reversed</div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-6">
+            <div class="text-box">
+                4<br>
+
+                <div>row-sm-flex-reversed</div>
+                x<br>
+                y<br>
+                x<br>
+                y<br>
+            </div>
+        </div>
+    </div>
+
+    <div class="row row-xs-flex">
+        <div class="col-xs-6 col-sm-4">
+            <div class="text-box">
+                5
+            </div>
+        </div>
+        <div class="col-xs-6 col-sm-4">
+            <div class="text-box">
+                6<br>
+                x<br>
+            </div>
+        </div>
+        <div class="col-xs-6 col-sm-4">
+            <div class="text-box">
+                7<br>
+                x<br>
+                y<br>
+            </div>
+        </div>
+        <div class="col-xs-6 col-sm-4">
+            <div class="text-box">
+                8
+            </div>
+        </div>
+        <div class="col-xs-6 col-sm-4 flex-order-sm--2">
+            <div class="text-box">
+                9<br>
+
+                <div>flex-order-sm--2</div>
+            </div>
+        </div>
+        <div class="col-xs-6 col-sm-4 flex-order--1">
+            <div class="text-box">
+                10<br>
+
+                <div>flex-order--1</div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+</body>
+
+</html>
