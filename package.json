@@ -2,7 +2,7 @@
   "name": "flex_rows",
   "version": "1.0.0",
   "description": "Adds an option to use flexbox-based rows in Bootstrap 3 framework.",
-  "main": "dist/flex_rows.css",
+  "main": "src/flex_rows.styl",
   "author": "monnef",
   "license": "MIT",
   "dependencies": {

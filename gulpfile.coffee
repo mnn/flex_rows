@@ -6,6 +6,7 @@ rimraf = require "rimraf"
 config =
   srcFiles: ["src/flex_rows.styl"]
   dstDir: "dist/"
+  watchables: ["src/**/*.styl"]
 
 gulp.task "default", ["all"]
 
@@ -35,6 +36,13 @@ gulp.task "dist", ->
 
 gulp.task "clean", (cb) ->
   clean config.dstDir, cb
+
+gulp.task "watch", ->
+  log "Watching for changes to trigger build task 'all'"
+  gulp.watch config.watchables, ["all"]
+
+
+# utility functions
 
 clean = (path, done) ->
   log "Cleaning: " + $.util.colors.blue(path)
